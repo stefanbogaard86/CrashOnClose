@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CrashOnClose.NotSoSpecialPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:crashOnClose="clr-namespace:CrashOnClose;assembly=CrashOnClose"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+    x:DataType="crashOnClose:NotSoSpecialViewModel">
+    <ContentPage.BindingContext>
+        <crashOnClose:NotSoSpecialViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label
+                HorizontalOptions="CenterAndExpand"
+                Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" />
+
+            <Button
+                Clicked="Button_OnClicked"
+                xct:TouchEffect.LongPressCommand="{Binding LongPressCommand}"
+                Text="close modal" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

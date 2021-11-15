@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CrashOnClose.SpecialPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:crashOnClose="clr-namespace:CrashOnClose;assembly=CrashOnClose">
+    <ContentPage.Content>
+        <StackLayout>
+            <crashOnClose:SpecialButton
+                Clicked="Button_OnClicked"
+                Text="Click me for special effect!" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
